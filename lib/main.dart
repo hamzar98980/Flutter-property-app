@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:proj/screens/login.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MaterialApp(
+    // debugShowCheckedModeBanner: false,
+    home: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {

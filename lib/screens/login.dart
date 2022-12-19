@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:proj/screens/account_login.dart';
 import 'package:proj/utils/colors_comp.dart';
 import 'package:proj/utils/text_comp.dart';
 
@@ -108,7 +109,10 @@ class _LoginState extends State<Login> {
                 Container(
                   width: 250,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => Account()));
+                    },
                     child: Text(Text_comp.sinpass),
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
