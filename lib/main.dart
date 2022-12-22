@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:proj/screens/login.dart';
 
 void main() {
-  runApp(MaterialApp(
-    // debugShowCheckedModeBanner: false,
-    home: MyApp(),
-  ));
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,6 +12,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Login();
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Login(),
+    );
   }
 }
