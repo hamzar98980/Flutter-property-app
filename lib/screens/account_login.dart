@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proj/screens/profile.dart';
 import 'package:proj/utils/colors_comp.dart';
 import 'package:proj/utils/text_comp.dart';
 
@@ -20,7 +21,8 @@ class _AccountState extends State<Account> {
 
   loginacc() {
     if (email.text == 'admin@gmail.com' && pass.text == 'admin') {
-      print("ok");
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => Profile()));
     } else {
       BlurryDialog alert = BlurryDialog();
 
