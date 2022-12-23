@@ -9,4 +9,6 @@ class Text_comp {
   static String forgetpass = "Forget the password?";
   static String conwith = "or continue with";
   static String signin = "Sign in";
+  static String locat = "Location";
+  static String locat2 = "Los Angeles, CA";
 }

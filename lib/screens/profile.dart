@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proj/components/alert.dart';
+import 'package:proj/screens/property.dart';
 import 'package:proj/utils/colors_comp.dart';
 
 import '../utils/text_comp.dart';
@@ -12,6 +13,7 @@ class Profile extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        elevation: 0,
         title: const Text(
           "Fill your Profile",
           style: TextStyle(color: Colors.black),
@@ -86,7 +88,13 @@ class Profile extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.8,
                     child: ElevatedButton(
                       onPressed: () {
-                        // loginacc();
+                        Navigator.of(context)
+                            .popUntil((route) => route.isFirst);
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Property()),
+                        );
                       },
                       child: Text("Continue"),
                       style: ButtonStyle(
