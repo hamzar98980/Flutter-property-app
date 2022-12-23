@@ -33,3 +33,34 @@ class BlurryDialog extends StatelessWidget {
         ));
   }
 }
+
+class Txtfield extends StatelessWidget {
+  String label;
+  Txtfield({super.key, required this.label});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 10, 10, 5),
+          child: Container(
+            height: MediaQuery.of(context).size.height * 0.07,
+            width: MediaQuery.of(context).size.width * 0.9,
+            decoration: BoxDecoration(
+                color: Color(colorconst.textfilld),
+                borderRadius: BorderRadius.circular(10)),
+            child: TextFormField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
+                labelText: label,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
