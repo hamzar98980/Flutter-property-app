@@ -1,6 +1,10 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:proj/utils/colors_comp.dart';
 import 'package:proj/utils/text_comp.dart';
+
+import '../components/alert.dart';
 
 class Property extends StatelessWidget {
   const Property({super.key});
@@ -34,24 +38,44 @@ class Property extends StatelessWidget {
           Padding(
             padding: EdgeInsets.fromLTRB(15, 15, 15, 5),
             child: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg")),
+                backgroundImage: AssetImage("assets/Images/user4.jpg")),
           ),
         ],
       ),
       body: Container(
         child: Column(
-            // children: [
-            // Row(
-            //   children: [
-            //     Text(
-            //       "data",
-            //       style: TextStyle(fontSize: 20),
-            //     )
-            //   ],
-            // )
-            // ],
+          children: [
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(15, 8, 8, 5),
+                  child: Text(
+                    Text_comp.discover,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 27,
+                        color: Color(colorconst.primarycolor)),
+                  ),
+                ),
+              ],
             ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(15, 2, 8, 5),
+                  child: Text(
+                    Text_comp.sutable,
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 27,
+                        color: Color(colorconst.primarycolor)),
+                  ),
+                ),
+              ],
+            ),
+            Sections(),
+          ],
+        ),
       ),
     );
   }

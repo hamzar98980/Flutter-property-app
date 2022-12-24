@@ -11,4 +11,6 @@ class Text_comp {
   static String signin = "Sign in";
   static String locat = "Location";
   static String locat2 = "Los Angeles, CA";
+  static String discover = "Discover Best";
+  static String sutable = "Suitable Property";
 }

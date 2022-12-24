@@ -64,3 +64,64 @@ class Txtfield extends StatelessWidget {
     );
   }
 }
+
+class Sections extends StatelessWidget {
+  const Sections({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    List sections = [
+      'Home',
+      'Apartment',
+      'Plot',
+      'Floor',
+      'Banglows',
+    ];
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 8, 8, 5),
+            child: Container(
+              width: MediaQuery.of(context).size.width * 1,
+              height: MediaQuery.of(context).size.height * 0.05,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: sections.length,
+                itemBuilder: (context, i) {
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                        padding: EdgeInsets.fromLTRB(13, 10, 0, 0),
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        height: MediaQuery.of(context).size.height * 0.05,
+                        decoration: BoxDecoration(
+                            color: (sections[i] == "Home")
+                                ? Color(colorconst.primarycolor)
+                                : Color(colorconst.boxfill),
+                            borderRadius: BorderRadius.circular(8)),
+                        child: Text(
+                          sections[i],
+                          style: (sections[i] == 'Home')
+                              ? TextStyle(color: Colors.white)
+                              : TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  color: Color(colorconst.primarycolor)),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      )
+                    ],
+                  );
+                },
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
