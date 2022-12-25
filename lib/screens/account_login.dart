@@ -13,7 +13,7 @@ class Account extends StatefulWidget {
 }
 
 class _AccountState extends State<Account> {
-  bool isObscure = false;
+  bool isObscure = true;
   bool isChecked = true;
 
   TextEditingController email = TextEditingController();
@@ -97,8 +97,8 @@ class _AccountState extends State<Account> {
                         fillColor: Color(colorconst.textfilld),
                         suffixIcon: IconButton(
                           icon: Icon(isObscure
-                              ? Icons.visibility
-                              : Icons.visibility_off),
+                              ? Icons.visibility_off
+                              : Icons.visibility),
                           onPressed: () {
                             setState(() {
                               isObscure = !isObscure;

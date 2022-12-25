@@ -13,4 +13,5 @@ class Text_comp {
   static String locat2 = "Los Angeles, CA";
   static String discover = "Discover Best";
   static String sutable = "Suitable Property";
+  static String bestfor = "Best for you";
 }

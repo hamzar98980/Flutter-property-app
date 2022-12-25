@@ -112,6 +112,7 @@ class Sections extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
+                        
                         width: 10,
                       )
                     ],

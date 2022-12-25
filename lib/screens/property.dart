@@ -12,6 +12,52 @@ class Property extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Color(colorconst.primarycolor),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.only(top: 8),
+              child: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.only(top: 8),
+              child: Icon(
+                Icons.search,
+                color: Colors.white,
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.only(top: 8),
+              child: Icon(
+                Icons.bookmark,
+                color: Colors.white,
+              ),
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Padding(
+              padding: EdgeInsets.only(top: 8),
+              child: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
+            ),
+            label: '',
+          ),
+        ],
+      ),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -74,6 +120,18 @@ class Property extends StatelessWidget {
               ],
             ),
             Sections(),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 12, 0, 8),
+                  child: Text(
+                    Text_comp.bestfor,
+                    style: TextStyle(
+                        fontSize: 15, color: Color(colorconst.primarycolor)),
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),
