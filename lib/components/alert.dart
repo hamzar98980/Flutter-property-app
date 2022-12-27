@@ -139,7 +139,7 @@ class Prop extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 8),
           child: Container(
-            height: MediaQuery.of(context).size.height * 0.37,
+            height: MediaQuery.of(context).size.height * 0.35,
             width: MediaQuery.of(context).size.width * 0.85,
             decoration: BoxDecoration(
                 color: Color(colorconst.primarycolor),

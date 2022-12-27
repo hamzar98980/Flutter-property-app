@@ -127,7 +127,7 @@ class Property extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(28, 12, 0, 8),
+                  padding: const EdgeInsets.fromLTRB(28, 12, 0, 5),
                   child: Text(
                     Text_comp.bestfor,
                     style: TextStyle(
@@ -141,12 +141,12 @@ class Property extends StatelessWidget {
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 5, 5, 2),
+                    padding: const EdgeInsets.fromLTRB(22, 3, 18, 2),
                     child: Row(
-                      children: [
+                      children: const [
                         Prop(),
                         SizedBox(
-                          width: 20,
+                          width: 18,
                         ),
                         Prop(),
                       ],
