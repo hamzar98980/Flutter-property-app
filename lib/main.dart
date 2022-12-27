@@ -7,6 +7,14 @@ void main() {
   );
 }
 
+// void main() {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky,
+//       overlays: [sy]).then(
+//     (_) => runApp(MyApp()),
+//   );
+// }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

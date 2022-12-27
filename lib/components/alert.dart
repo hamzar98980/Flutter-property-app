@@ -3,6 +3,8 @@ import 'dart:ui';
 
 import 'package:proj/utils/colors_comp.dart';
 
+import '../utils/text_comp.dart';
+
 class BlurryDialog extends StatelessWidget {
   TextStyle textStyle = TextStyle(color: Colors.black);
 
@@ -112,7 +114,6 @@ class Sections extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        
                         width: 10,
                       )
                     ],
@@ -123,6 +124,142 @@ class Sections extends StatelessWidget {
           )
         ],
       ),
+    );
+  }
+}
+
+class Prop extends StatelessWidget {
+  const Prop({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Container(
+            height: MediaQuery.of(context).size.height * 0.37,
+            width: MediaQuery.of(context).size.width * 0.85,
+            decoration: BoxDecoration(
+                color: Color(colorconst.primarycolor),
+                borderRadius: BorderRadius.circular(15)),
+            child: Container(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Stack(
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width * 0.85,
+                            height: MediaQuery.of(context).size.width * 0.41,
+                            decoration: BoxDecoration(
+                              color: Color(colorconst.boxfill),
+                              borderRadius: BorderRadius.circular(15),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: const BorderRadius.only(
+                                  topLeft: Radius.circular(15),
+                                  topRight: Radius.circular(15)),
+                              child: Image.asset(
+                                "assets/Images/house1.jpg",
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(19, 8, 0, 0),
+                        child: Text(
+                          Text_comp.crhouse,
+                          style: const TextStyle(
+                            fontSize: 15,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(19, 3, 0, 0),
+                        child: Text(
+                          Text_comp.address,
+                          style: const TextStyle(
+                              fontSize: 10,
+                              color: Color.fromRGBO(255, 255, 255, 0.50)),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(19, 8, 0, 0),
+                            child: Image.asset("assets/Images/bed1.png"),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(5, 6, 0, 0),
+                        child: Text(
+                          Text_comp.bed4,
+                          style: const TextStyle(
+                              fontSize: 10,
+                              color: Color.fromRGBO(255, 255, 255, 0.50)),
+                        ),
+                      ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(19, 8, 0, 0),
+                            child: Image.asset("assets/Images/bath.png"),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(5, 6, 0, 0),
+                        child: Text(
+                          Text_comp.bath4,
+                          style: const TextStyle(
+                              fontSize: 10,
+                              color: Color.fromRGBO(255, 255, 255, 0.50)),
+                        ),
+                      ),
+                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(19, 8, 0, 0),
+                            child: Image.asset("assets/Images/garage.png"),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(5, 6, 0, 0),
+                        child: Text(
+                          Text_comp.garage,
+                          style: const TextStyle(
+                              fontSize: 10,
+                              color: Color.fromRGBO(255, 255, 255, 0.50)),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

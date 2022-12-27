@@ -1,6 +1,7 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:proj/utils/colors_comp.dart';
 import 'package:proj/utils/text_comp.dart';
 
@@ -59,6 +60,9 @@ class Property extends StatelessWidget {
         ],
       ),
       appBar: AppBar(
+        systemOverlayStyle: SystemUiOverlayStyle(
+          statusBarColor: Colors.white, // Status bar
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
         title: Column(
@@ -123,7 +127,7 @@ class Property extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(20, 12, 0, 8),
+                  padding: const EdgeInsets.fromLTRB(28, 12, 0, 8),
                   child: Text(
                     Text_comp.bestfor,
                     style: TextStyle(
@@ -131,7 +135,28 @@ class Property extends StatelessWidget {
                   ),
                 )
               ],
-            )
+            ),
+            Column(
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 5, 5, 2),
+                    child: Row(
+                      children: [
+                        Prop(),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Prop(),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+
+            // Prop(),
           ],
         ),
       ),

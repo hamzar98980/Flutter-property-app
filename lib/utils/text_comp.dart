@@ -14,4 +14,9 @@ class Text_comp {
   static String discover = "Discover Best";
   static String sutable = "Suitable Property";
   static String bestfor = "Best for you";
+  static String crhouse = "CRAFTSMAN HOUSE";
+  static String address = "520 N Btoudry Ave Los Angeles";
+  static String bed4 = "4 Beds";
+  static String bath4 = "4 Baths";
+  static String garage = "1 Garage";
 }
