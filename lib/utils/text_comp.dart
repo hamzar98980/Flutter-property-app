@@ -19,4 +19,7 @@ class Text_comp {
   static String bed4 = "4 Beds";
   static String bath4 = "4 Baths";
   static String garage = "1 Garage";
+  static String nearby = "Nearby Your Location";
+  static String rnhome = "RANCH HOME";
+  static String address2 = "520 N Btoudry Ave Los Angeles";
 }

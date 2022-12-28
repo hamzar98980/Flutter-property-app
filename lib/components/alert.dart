@@ -139,7 +139,7 @@ class Prop extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 8),
           child: Container(
-            height: MediaQuery.of(context).size.height * 0.35,
+            height: MediaQuery.of(context).size.height * 0.34,
             width: MediaQuery.of(context).size.width * 0.85,
             decoration: BoxDecoration(
                 color: Color(colorconst.primarycolor),
@@ -259,6 +259,124 @@ class Prop extends StatelessWidget {
             ),
           ),
         ),
+      ],
+    );
+  }
+}
+
+class Nearby extends StatelessWidget {
+  const Nearby({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Container(
+          width: 100,
+          height: MediaQuery.of(context).size.height * 0.12,
+          decoration: BoxDecoration(
+            color: Color(colorconst.boxfill),
+            borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(10),
+              bottomLeft: Radius.circular(10),
+            ),
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.asset(
+              "assets/Images/house1.jpg",
+              fit: BoxFit.fill,
+            ),
+          ),
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width * 0.63,
+          height: MediaQuery.of(context).size.height * 0.12,
+          decoration: BoxDecoration(
+            color: Color(colorconst.boxfill),
+            borderRadius: const BorderRadius.only(
+              topRight: Radius.circular(10),
+              bottomRight: Radius.circular(10),
+            ),
+          ),
+          child: Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 15, 2, 2),
+                    child: Text(
+                      Text_comp.rnhome,
+                      style: TextStyle(color: Color(colorconst.primarycolor)),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 5, 2, 2),
+                    child: Text(
+                      Text_comp.address2,
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: Color(
+                          colorconst.primarycolor,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(8, 3, 2, 0),
+                    child: Image.asset("assets/Images/bed1.png"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 3, 0, 0),
+                    child: Text(
+                      Text_comp.bed4,
+                      style: const TextStyle(
+                        fontSize: 10,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(8, 3, 2, 0),
+                    child: Image.asset("assets/Images/bath.png"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 3, 0, 0),
+                    child: Text(
+                      Text_comp.bath4,
+                      style: const TextStyle(
+                        fontSize: 10,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(8, 3, 2, 0),
+                    child: Image.asset("assets/Images/garage.png"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 3, 0, 0),
+                    child: Text(
+                      Text_comp.garage,
+                      style: const TextStyle(
+                        fontSize: 10,
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        )
       ],
     );
   }

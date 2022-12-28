@@ -60,7 +60,7 @@ class Property extends StatelessWidget {
         ],
       ),
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle(
+        systemOverlayStyle: const SystemUiOverlayStyle(
           statusBarColor: Colors.white, // Status bar
         ),
         backgroundColor: Colors.white,
@@ -92,72 +92,97 @@ class Property extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 8, 8, 5),
-                  child: Text(
-                    Text_comp.discover,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 27,
-                        color: Color(colorconst.primarycolor)),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 2, 8, 5),
-                  child: Text(
-                    Text_comp.sutable,
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 27,
-                        color: Color(colorconst.primarycolor)),
-                  ),
-                ),
-              ],
-            ),
-            Sections(),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(28, 12, 0, 5),
-                  child: Text(
-                    Text_comp.bestfor,
-                    style: TextStyle(
-                        fontSize: 15, color: Color(colorconst.primarycolor)),
-                  ),
-                )
-              ],
-            ),
-            Column(
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(22, 3, 18, 2),
-                    child: Row(
-                      children: const [
-                        Prop(),
-                        SizedBox(
-                          width: 18,
-                        ),
-                        Prop(),
-                      ],
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(15, 8, 8, 2),
+                    child: Text(
+                      Text_comp.discover,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 27,
+                          color: Color(colorconst.primarycolor)),
                     ),
                   ),
-                )
-              ],
-            ),
-
-            // Prop(),
-          ],
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(15, 2, 8, 5),
+                    child: Text(
+                      Text_comp.sutable,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 27,
+                          color: Color(colorconst.primarycolor)),
+                    ),
+                  ),
+                ],
+              ),
+              Sections(),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(28, 8, 0, 3),
+                    child: Text(
+                      Text_comp.bestfor,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 15,
+                        color: Color(colorconst.primarycolor),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              Column(
+                children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(22, 3, 18, 2),
+                      child: Row(
+                        children: const [
+                          Prop(),
+                          SizedBox(
+                            width: 18,
+                          ),
+                          Prop(),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(25, 12, 0, 5),
+                    child: Text(
+                      Text_comp.nearby,
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                          color: Color(colorconst.primarycolor)),
+                    ),
+                  )
+                ],
+              ),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(8, 12, 0, 5),
+                child: Nearby(),
+              ),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(8, 12, 0, 10),
+                child: Nearby(),
+              ),
+            ],
+          ),
         ),
       ),
     );
